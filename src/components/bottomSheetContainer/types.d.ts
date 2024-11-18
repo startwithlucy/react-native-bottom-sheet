@@ -5,7 +5,7 @@ import type { BottomSheetProps } from '../bottomSheet/types';
 
 export interface BottomSheetContainerProps
   extends Partial<
-    Pick<BottomSheetProps, 'topInset' | 'bottomInset' | 'detached'>
+    Pick<BottomSheetProps, 'topInset' | 'bottomInset' | 'detached' | 'testID' | 'accessibilityLabel'>
   > {
   containerHeight: SharedValue<number>;
   containerOffset: SharedValue<Required<Insets>>;

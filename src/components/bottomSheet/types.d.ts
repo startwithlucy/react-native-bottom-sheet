@@ -1,5 +1,5 @@
 import type React from 'react';
-import type { Insets, StyleProp, ViewStyle } from 'react-native';
+import type { Insets, StyleProp, ViewProps, ViewStyle } from 'react-native';
 import type { PanGesture } from 'react-native-gesture-handler';
 import type {
   AnimateStyle,
@@ -24,8 +24,11 @@ import type { BottomSheetBackgroundProps } from '../bottomSheetBackground';
 import type { BottomSheetFooterProps } from '../bottomSheetFooter';
 import type { BottomSheetHandleProps } from '../bottomSheetHandle';
 
+type ViewTestIDProps = Pick<ViewProps, 'testID' | 'accessibilityLabel'>;
+
 export interface BottomSheetProps
   extends BottomSheetAnimationConfigs,
+    ViewTestIDProps,
     Partial<BottomSheetGestureProps>,
     Omit<NullableAccessibilityProps, 'accessibilityHint'> {
   //#region configuration

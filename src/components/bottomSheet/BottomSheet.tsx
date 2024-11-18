@@ -167,6 +167,10 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
         _providedAccessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL,
       accessibilityRole:
         _providedAccessibilityRole = DEFAULT_ACCESSIBILITY_ROLE,
+
+      // E2E
+      testID,
+      accessibilityLabel,
     } = props;
     //#endregion
 
@@ -1891,6 +1895,8 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
               bottomInset={bottomInset}
               detached={detached}
               style={_providedContainerStyle}
+              testID={testID}
+              accessibilityLabel={accessibilityLabel}
             >
               <Animated.View style={containerStyle}>
                 <BottomSheetBackgroundContainer
